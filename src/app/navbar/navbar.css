@@ -1,0 +1,32 @@
+.navbar {
+    position: sticky;
+    top: 0;
+    height: 80px; /* or try 100px for thicker look */
+    background: transparent;
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    padding: 0 3rem;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.navbar ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    gap: 2.5rem;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: black;
+}
+
+.navbar li:hover {
+    color: #555;
+    transition: color 0.2s;
+}
