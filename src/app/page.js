@@ -8,6 +8,7 @@ import ProjectCarousel from "./projcarosel/carousel"; // Renamed to avoid confli
 import { Github, Linkedin, Mail } from 'lucide-react';
 import VanillaTilt from "vanilla-tilt";
 import ExtracurricularSection from "./ecs/extracurriculars";
+import TechStack from "./techstack/techstack";
 
 const Ahsing = localFont({
   src: "fonts/Ahsing.ttf"
@@ -134,6 +135,9 @@ export default function Home() {
       </div>
       <div className="w-full flex justify-center mt-0">
         <ProjectCarousel />
+      </div>
+      <div>
+        <TechStack />
       </div>
     </div>
   );
