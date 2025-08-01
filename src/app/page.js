@@ -4,7 +4,7 @@ import Image from "next/image";
 import localFont from "next/font/local";
 import { useState, useEffect, useRef } from 'react';
 import NavBar from "./navbar/navbar";
-import ProjectCarousel from "./projcarosel/carousel"; // Renamed to avoid conflict
+import ProjectCarousel from "./projcarosel/carousel"; 
 import { Github, Linkedin, Mail } from 'lucide-react';
 import VanillaTilt from "vanilla-tilt";
 import ExtracurricularSection from "./ecs/extracurriculars";
