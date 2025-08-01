@@ -7,6 +7,7 @@ import NavBar from "./navbar/navbar";
 import ProjectCarousel from "./projcarosel/carousel"; // Renamed to avoid conflict
 import { Github, Linkedin, Mail } from 'lucide-react';
 import VanillaTilt from "vanilla-tilt";
+import ExtracurricularSection from "./ecs/extracurriculars";
 
 const Ahsing = localFont({
   src: "fonts/Ahsing.ttf"
@@ -127,6 +128,9 @@ export default function Home() {
             />
           </div>
         </div>
+      </div>
+      <div>
+        <ExtracurricularSection />
       </div>
       <div className="w-full flex justify-center mt-0">
         <ProjectCarousel />

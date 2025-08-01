@@ -6,7 +6,7 @@ const CarouselCard = ({
   title, 
   description, 
   buttonText = "Learn More",
-  onButtonClick = () => {},
+  link = "#",
   customIcon = null, 
   className = "" 
 }) => {
@@ -31,10 +31,16 @@ const CarouselCard = ({
     setTilt({ x: 0, y: 0 });
   };
 
+  const handleButtonClick = () => {
+    if (link && link !== "#") {
+      window.open(link, '_blank', 'noopener,noreferrer');
+    }
+  };
+
   return (
     <div 
       ref={cardRef}
-      className={`relative overflow-hidden rounded-2xl w-80 h-96 group cursor-pointer bg-white shadow-lg ${className}`}
+      className={`relative overflow-hidden rounded-2xl w-80 h-[450px] group cursor-pointer bg-white shadow-lg ${className}`}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       style={{
@@ -43,7 +49,7 @@ const CarouselCard = ({
       }}
     >
 
-      <div className="relative h-48 overflow-hidden">
+      <div className="relative h-52 overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
           style={{ backgroundImage: `url(${heroImage})` }}
@@ -51,31 +57,31 @@ const CarouselCard = ({
         
         {customIcon && (
           <div className="absolute top-4 left-4 z-20">
-            <div className="p-2 rounded-full bg-white/90 backdrop-blur-sm border border-white/50 shadow-lg">
+            <div className="p-2 rounded-full shadow-lg bg-white/10 hover:bg-white transition-all duration-300">
               <img 
                 src={customIcon} 
                 alt="Custom icon" 
-                className="w-6 h-6 object-contain"
+                className="w-10 h-10 object-contain"
               />
             </div>
           </div>
         )}
       </div>
       
-      <div className="p-6 h-48 flex flex-col justify-between bg-white">
+      <div className="p-6 h-[242px] flex flex-col justify-between bg-white">
         <div>
-          <h3 className="text-gray-900 text-xl font-bold mb-2 leading-tight">
+          <h3 className="text-gray-900 text-xl font-bold mb-3 leading-tight">
             {title}
           </h3>
           
-          <p className="text-gray-600 text-sm mb-4 line-clamp-3 leading-relaxed">
+          <p className="text-gray-600 text-sm mb-4 line-clamp-4 leading-relaxed">
             {description}
           </p>
         </div>
         
         <button
-          onClick={onButtonClick}
-          className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-4 rounded-lg transition-all duration-200 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98]"
+          onClick={handleButtonClick}
+          className="w-full bg-purple-600 hover:bg-purple-700 text-white font-medium py-3 px-4 rounded-lg transition-all duration-200 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98]"
         >
           {buttonText}
         </button>
@@ -90,35 +96,42 @@ const ProjectCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
   
-  // ai generated exampels
   const cards = [
     {
-      heroImage: "flower.png",
-      title: "Web Development Project",
-      description: "A modern React application with responsive design and cutting-edge features. Built with the latest technologies and best practices.",
-      buttonText: "View Project",
+      heroImage: "ethics.jpg",
+      title: "DCTI Ethics Bowl | Executive & Member",
+      description: "A computer vision project using OpenCV to detect when individuals fall | Won first place in school-wide science fair & Bronze at TSF",
       customIcon: "first.png"
     },
     {
-      heroImage: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=800&h=600&fit=crop",
-      title: "Mobile App Design",
-      description: "Intuitive mobile application design with seamless user experience and beautiful interface elements.",
-      buttonText: "Learn More",
-      customIcon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
+      heroImage: "Lively.png",
+      title: "Live.ly | HT6 Submission",
+      description: "Resource and lifeline app for unhoused individuals in Toronto, developed for Hack the 6ix using NextJS, Vellum, and MongoDB.",
+      buttonText: "View Devpost",
+      link: "https://devpost.com/software/live-ly-nvm7k8",
     },
     {
-      heroImage: "https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?w=800&h=600&fit=crop",
-      title: "Data Analytics Dashboard",
-      description: "Comprehensive analytics platform with real-time data visualization and interactive charts for business insights.",
-      buttonText: "Explore",
-      customIcon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+      heroImage: "solaravision.jpg",
+      title: "SolaraVision | Climate Change Makers Winner",
+      description: "A social enterprise centred around innovating solar panels and making it accessible for everyone.",
+      buttonText: "See Devpost",
+      link: "https://github.com/yourusername/analytics-dashboard",
+      customIcon: "fourth.png"
     },
     {
-      heroImage: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=600&fit=crop",
-      title: "AI Machine Learning",
-      description: "Innovative machine learning solution using advanced algorithms to solve complex business problems.",
-      buttonText: "Discover",
-      customIcon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg"
+      heroImage: "ChronoSync.png",
+      title: "ChronoSync | Time Management App",
+      description: "My first webapp built with NextJS, MongoDB, and Spring Boot, to help high school students reclaim their time. ",
+      buttonText: "Find Out More",
+      link: "https://www.linkedin.com/in/qaziayan/details/projects/546090583/multiple-media-viewer/?profileId=ACoAAEhUJiwBz36I8TPx4zlrPzPzyTQ-_2LjgZk&treasuryMediaId=1737860362473",
+    },
+        {
+      heroImage: "skib.jpg",
+      title: "S.K.I.B. Autonomous Vehicle | Gr. 11 SciTech Project",
+      description: "Autonomous car made with P.I.D. and analysis algorithms with OpenCV | Won first place in school-wide science fair.",
+      buttonText: "See Report",
+      link: "https://www.youtube.com",
+      customIcon: "first.png"
     }
   ];
 
@@ -135,11 +148,6 @@ const ProjectCarousel = () => {
   const goToSlide = (index) => {
     setCurrentIndex(index);
     setIsAutoPlaying(false);
-  };
-
-  const handleCardClick = (title) => {
-    setIsAutoPlaying(false);
-    alert(`Clicked on: ${title}`);
   };
 
   useEffect(() => {
@@ -163,7 +171,7 @@ const ProjectCarousel = () => {
             </p>
             </div>
         <div className="relative flex items-center justify-center">
-          <div className="relative w-full max-w-[1000px] h-96 flex items-center justify-center px-4">
+          <div className="relative w-full max-w-[1000px] h-[450px] flex items-center justify-center px-4">
             {cards.map((card, index) => {
               const isActive = index === currentIndex;
               const isPrev = index === (currentIndex - 1 + cards.length) % cards.length;
@@ -211,8 +219,8 @@ const ProjectCarousel = () => {
                     title={card.title}
                     description={card.description}
                     buttonText={card.buttonText}
+                    link={card.link}
                     customIcon={card.customIcon}
-                    onButtonClick={() => handleCardClick(card.title)}
                   />
                 </div>
               );
@@ -236,7 +244,7 @@ const ProjectCarousel = () => {
                 onClick={() => goToSlide(index)}
                 className={`w-3 h-3 rounded-full transition-all duration-200 ${
                   index === currentIndex
-                    ? 'bg-blue-600 scale-110'
+                    ? 'bg-purple-600 scale-110'
                     : 'bg-gray-300 hover:bg-gray-400'
                 }`}
               />
