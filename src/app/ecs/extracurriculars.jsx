@@ -8,7 +8,8 @@ const ExtracurricularSection = ({ Ahsing, DMSans }) => {
       title: "ChronoSync | Time Management App",
       description: "My first webapp built with NextJS, MongoDB, and Spring Boot, aimed to help high school students reclaim their time through dynamic time scheduling. Developed for ICS4U1.",
       buttonText: "Find Out More",
-      buttonLink: "https://www.linkedin.com/in/qaziayan/details/projects/546090583/multiple-media-viewer/?profileId=ACoAAEhUJiwBz36I8TPx4zlrPzPzyTQ-_2LjgZk&treasuryMediaId=1737860362473"
+      buttonLink: "https://www.linkedin.com/in/qaziayan/details/projects/546090583/multiple-media-viewer/?profileId=ACoAAEhUJiwBz36I8TPx4zlrPzPzyTQ-_2LjgZk&treasuryMediaId=1737860362473",
+      dateCreated: "Dec. 2024 - Jan. 2025"
     },
     {
       image: "/solaravision.jpg", 
@@ -16,15 +17,17 @@ const ExtracurricularSection = ({ Ahsing, DMSans }) => {
       description: "A social enterprise centred around new, dynamic types of solar panels, aimed at making panels accessible for everyone through an all-encompassing mobile app.",
       buttonText: "See Devpost",
       buttonLink: "https://devpost.com/software/solaravision",
-      topIcon: "/fourth.png"
+      topIcon: "/fourth.png",
+      dateCreated: "May 2024"
     },
     {
       image: "/skib.jpg",
       title: "S.K.I.B. Autonomous Vehicle | 1st @ SciTech Fair",
       description: "Autonomous car made with P.I.D., Arduino Mega, and analysis algorithms with OpenCV and Scikit-Image. The project was aimed at optimizing the job of nurses in healthcare settings",
-      buttonText: "View Report",
-      buttonLink: "#",
-      topIcon: "/first.png"
+      buttonText: "Learn More",
+      buttonLink: "https://www.linkedin.com/in/qaziayan/details/projects/170968803/multiple-media-viewer/?profileId=ACoAAEhUJiwBz36I8TPx4zlrPzPzyTQ-_2LjgZk&treasuryMediaId=1752517625785",
+      topIcon: "/first.png",
+      dateCreated: "May 2025 - June 2025"
     },
     {
       image: "/ppo.jpg",
@@ -32,7 +35,8 @@ const ExtracurricularSection = ({ Ahsing, DMSans }) => {
       description: "A computer vision project using OpenCV developed in Gr. 9 to detect when individuals fall using four custom-coded algorithms aimed at reducing carehome deaths.",
       buttonText: "See GitHub",
       buttonLink: "https://github.com/Yes361/Fall-Detection",
-      topIcon: "/first.png"
+      topIcon: "/first.png",
+      dateCreated: "May 2023 - June 2023"
     },
     {
       image: "/Lively.png",
@@ -40,6 +44,7 @@ const ExtracurricularSection = ({ Ahsing, DMSans }) => {
       description: "Resource and lifeline app for unhoused individuals in Toronto to find the closest shelters, foodbanks, and various life-saving resources, using dynamic AI workflows. It was developed for Hack the 6ix using NextJS, Vellum AI, and MongoDB.",
       buttonText: "See Devpost",
       buttonLink: "https://devpost.com/software/live-ly-nvm7k8",
+      dateCreated: "July 2025"
     },
     {
       image: "/Hack the Skies (5).png",
@@ -47,13 +52,15 @@ const ExtracurricularSection = ({ Ahsing, DMSans }) => {
       description: "Hack the Skies is a highschool-student run hackathon event based in Toronto, founded in 2023. The 2024 iteration featured 16 projects from 80+ participants!",
       buttonText: "Visit Site",
       buttonLink: "https://hacktheskies.com/",
+      dateCreated: "Oct. 2023 - Present"
     },
     {
       image: "/oep.jpg",
       title: "Oakridge Engineering Project",
       description: "After noticing a defecit in STEM-resources in my own community, I used a grant to run a series of engineering workshops for the Oakridge riding, teaching students about the basics of engineering design :)",
       buttonText: "Learn More",
-      buttonLink: "https://www.linkedin.com/in/qaziayan/details/projects/45327717/multiple-media-viewer/?profileId=ACoAAEhUJiwBz36I8TPx4zlrPzPzyTQ-_2LjgZk&treasuryMediaId=1715884764160"
+      buttonLink: "https://www.linkedin.com/in/qaziayan/details/projects/45327717/multiple-media-viewer/?profileId=ACoAAEhUJiwBz36I8TPx4zlrPzPzyTQ-_2LjgZk&treasuryMediaId=1715884764160",
+      dateCreated: "Aug. 2023 - March 2024"
     }
   ];
 
@@ -80,7 +87,7 @@ const ExtracurricularSection = ({ Ahsing, DMSans }) => {
           >
             {activity.topIcon && (
               <div className="absolute top-4 left-4 z-10">
-                <div className="w-12 h-12 bg-white rounded-lg shadow-md p-2 flex items-center justify-center">
+                <div className="w-12 h-12 bg-white/20 rounded-lg shadow-md p-2 flex items-center justify-center backdrop-blur-sm">
                   <Image
                     src={activity.topIcon}
                     alt={`${activity.title} icon`}
@@ -98,6 +105,13 @@ const ExtracurricularSection = ({ Ahsing, DMSans }) => {
                 fill
                 className="object-cover group-hover:scale-110 transition-transform duration-300"
               />
+              {activity.dateCreated && (
+                <div className="absolute bottom-2 right-2 z-10">
+                  <div className={`bg-black/70 text-white px-2 py-1 rounded-md text-xs font-medium backdrop-blur-sm ${DMSans?.className || ''}`}>
+                    {activity.dateCreated}
+                  </div>
+                </div>
+              )}
             </div>
             <h3 className={`text-xl font-bold mb-3 text-gray-800 ${Ahsing?.className || ''} `}>
               {activity.title}

@@ -1,8 +1,10 @@
 .navbar {
-    position: sticky;
+    position: fixed;
     top: 0;
-    height: 80px; /* or try 100px for thicker look */
-    background: transparent;
+    left: 0;
+    right: 0;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.8); 
     backdrop-filter: blur(10px);
     display: flex;
     justify-content: space-between;
@@ -11,6 +13,8 @@
     padding: 0 3rem;
     font-size: 1rem;
     font-weight: 500;
+    z-index: 1000;
+    transition: transform 0.3s ease;
 }
 
 .navbar ul {
@@ -29,4 +33,8 @@
 .navbar li:hover {
     color: #555;
     transition: color 0.2s;
+}
+
+.navbar-hidden {
+    transform: translateY(-100%);
 }

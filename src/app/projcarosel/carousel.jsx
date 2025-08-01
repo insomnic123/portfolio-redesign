@@ -5,9 +5,7 @@ const CarouselCard = ({
   heroImage, 
   title, 
   description, 
-  buttonText = "Learn More",
-  link = "#",
-  customIcon = null, 
+  chipText = null,
   className = "" 
 }) => {
   const cardRef = useRef(null);
@@ -31,16 +29,10 @@ const CarouselCard = ({
     setTilt({ x: 0, y: 0 });
   };
 
-  const handleButtonClick = () => {
-    if (link && link !== "#") {
-      window.open(link, '_blank', 'noopener,noreferrer');
-    }
-  };
-
   return (
     <div 
       ref={cardRef}
-      className={`relative overflow-hidden rounded-2xl w-80 h-[450px] group cursor-pointer bg-white shadow-lg ${className}`}
+      className={`relative overflow-hidden rounded-2xl w-80 min-h-[400px] group cursor-pointer bg-white shadow-lg ${className}`}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       style={{
@@ -55,36 +47,26 @@ const CarouselCard = ({
           style={{ backgroundImage: `url(${heroImage})` }}
         />
         
-        {customIcon && (
-          <div className="absolute top-4 left-4 z-20">
-            <div className="p-2 rounded-full shadow-lg bg-white/10 hover:bg-white transition-all duration-300">
-              <img 
-                src={customIcon} 
-                alt="Custom icon" 
-                className="w-10 h-10 object-contain"
-              />
+        {/* Small chip on bottom right of image */}
+        {chipText && (
+          <div className="absolute bottom-3 right-3 z-20">
+            <div className="px-3 py-1 rounded-full bg-black/50 backdrop-blur-sm border border-white/20">
+              <span className="text-white text-xs font-medium">{chipText}</span>
             </div>
           </div>
         )}
       </div>
       
-      <div className="p-6 h-[242px] flex flex-col justify-between bg-white">
+      <div className="p-6 flex flex-col bg-white">
         <div>
           <h3 className="text-gray-900 text-xl font-bold mb-3 leading-tight">
             {title}
           </h3>
           
-          <p className="text-gray-600 text-sm mb-4 line-clamp-4 leading-relaxed">
+          <p className="text-gray-600 text-sm leading-relaxed">
             {description}
           </p>
         </div>
-        
-        <button
-          onClick={handleButtonClick}
-          className="w-full bg-purple-600 hover:bg-purple-700 text-white font-medium py-3 px-4 rounded-lg transition-all duration-200 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98]"
-        >
-          {buttonText}
-        </button>
       </div>
       
       <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -skew-x-12 transform translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000 pointer-events-none" />
@@ -100,38 +82,38 @@ const ProjectCarousel = () => {
     {
       heroImage: "ethics.jpg",
       title: "DCTI Ethics Bowl | Executive & Member",
-      description: "A computer vision project using OpenCV to detect when individuals fall | Won first place in school-wide science fair & Bronze at TSF",
-      customIcon: "first.png"
+      description: "Competed in regional ethics bowl competition, discussing and debating various ethical dilemmas and helping lead sub-teams!",
+      chipText: "Oct. 2022 - Present"
     },
     {
-      heroImage: "Lively.png",
-      title: "Live.ly | HT6 Submission",
-      description: "Resource and lifeline app for unhoused individuals in Toronto, developed for Hack the 6ix using NextJS, Vellum, and MongoDB.",
-      buttonText: "View Devpost",
-      link: "https://devpost.com/software/live-ly-nvm7k8",
+      heroImage: "steamicfullteam.jpg",
+      title: "Steam IC | Chapter Co-President & Participant",
+      description: "Helped organize and manage a club of 30+ students, helping with their preparation to compete in the STEAM ICAC. I also developed an astronomy project with my team where we simulated star clusters!",
+      chipText: "Sept. 2024 - Present"
     },
     {
-      heroImage: "solaravision.jpg",
-      title: "SolaraVision | Climate Change Makers Winner",
-      description: "A social enterprise centred around innovating solar panels and making it accessible for everyone.",
-      buttonText: "See Devpost",
-      link: "https://github.com/yourusername/analytics-dashboard",
-      customIcon: "fourth.png"
+      heroImage: "dcti.jpg",
+      title: "DCTI Ambassador | Co-President",
+      description: "Organized volunteering opportunities for 80+ students for events with 1000+ participants, helping ensure smooth operations and positive experiences with the community.",
+      chipText: "Oct. 2022 - Present"
     },
     {
-      heroImage: "ChronoSync.png",
-      title: "ChronoSync | Time Management App",
-      description: "My first webapp built with NextJS, MongoDB, and Spring Boot, to help high school students reclaim their time. ",
-      buttonText: "Find Out More",
-      link: "https://www.linkedin.com/in/qaziayan/details/projects/546090583/multiple-media-viewer/?profileId=ACoAAEhUJiwBz36I8TPx4zlrPzPzyTQ-_2LjgZk&treasuryMediaId=1737860362473",
+      heroImage: "weeknd.jpg",
+      title: "TPL Teen Council | Project Lead",
+      description: "Organized resources for running a case study competition as a part of the TPL. This taught me a lot about navigating bureaucracy and working with a large organization!",
+      chipText: "Oct. 2024 - May 2025"
     },
-        {
-      heroImage: "skib.jpg",
-      title: "S.K.I.B. Autonomous Vehicle | Gr. 11 SciTech Project",
-      description: "Autonomous car made with P.I.D. and analysis algorithms with OpenCV | Won first place in school-wide science fair.",
-      buttonText: "See Report",
-      link: "https://www.youtube.com",
-      customIcon: "first.png"
+    {
+      heroImage: "youreka.jpg",
+      title: "Tuberculosis & Economic Indicator Research @ Youreka UofT",
+      description: "I used R to investigate correlations between TB Incidence and Mortality, and economic indicators like GDP, finalizing the results in a research paper and poster presented at a symposium.",
+      chipText: "Feb. 2025 - Apr. 2025"
+    },
+    {
+      heroImage: "lul.jpg",
+      title: "Shad @ LUL, Sudbury",
+      description: "Spent a month at LUL, Sudbury, with strangers from across Canada, learning about entrepreneurship, engineering, and leadership. I also worked on a project to create a prototype for passive architecture buildings & energy optimizing AI software.",
+      chipText: "July 2024"
     }
   ];
 
@@ -164,14 +146,13 @@ const ProjectCarousel = () => {
     <div className="min-h-screen flex items-center justify-center p-2 md:p-2">
       <div className="relative">
             <div className="text-center mb-8">
-            <h1 className="text-gray-900 text-3xl font-bold mb-2">Featured Projects</h1>
+            <h1 className="text-gray-900 text-3xl font-bold mb-2">Featured Extracurriculars</h1>
             <p className="text-gray-600">
-                Discover my latest work and creations
-                {isAutoPlaying && <span className="ml-2 text-gray-400">• Auto-playing</span>}
+                Alas I enjoy touching grass and being involved with my community 🥀 Here are <i>some</i> of my extracurriculars that I'm particularly proud of!
             </p>
             </div>
         <div className="relative flex items-center justify-center">
-          <div className="relative w-full max-w-[1000px] h-[450px] flex items-center justify-center px-4">
+          <div className="relative w-full max-w-[1000px] flex items-start justify-center px-4" style={{minHeight: '450px'}}>
             {cards.map((card, index) => {
               const isActive = index === currentIndex;
               const isPrev = index === (currentIndex - 1 + cards.length) % cards.length;
@@ -218,9 +199,7 @@ const ProjectCarousel = () => {
                     heroImage={card.heroImage}
                     title={card.title}
                     description={card.description}
-                    buttonText={card.buttonText}
-                    link={card.link}
-                    customIcon={card.customIcon}
+                    chipText={card.chipText}
                   />
                 </div>
               );
