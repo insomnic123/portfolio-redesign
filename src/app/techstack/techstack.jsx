@@ -78,7 +78,7 @@ const TechStack = ({ Ahsing, DMSans }) => {
             hoverColor: "hue-rotate-[350deg] saturate-150 brightness-110"
         },
         {
-            icon: "techstackicons/davinci_resolve_17_logo.svg",
+            icon: "techstackicons/DaVinci_Resolve_17_logo.svg",
             techstackname: "DaVinci Resolve",
             hoverColor: "hue-rotate-[200deg] saturate-150 brightness-110"
         },
