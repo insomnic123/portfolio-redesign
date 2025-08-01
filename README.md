@@ -1,1 +1,1 @@
-This is a project intended to help relearn my webdev skills prior to HT6, and also update my portfolio in the process :))
+This project started as a way to relearn webdev before HT6, but evolved into a learning journey where I used AI as little as possible and created a portfolio basically from scratch! It uses vercel for hosting and is built on NextJS. It may not be the most useful or technically impressive project out there, but the learning journey was definitely worth it :) 
