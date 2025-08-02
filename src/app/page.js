@@ -139,6 +139,32 @@ export default function Home() {
       <div id="techstack">
         <TechStack />
       </div>
+      
+      <footer className="bg-black text-white mt-6 py-6 px-4 sm:px-6 md:px-12">
+        <div className="w-full max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
+          <div className="flex gap-4">
+            <a href="https://www.linkedin.com/in/qaziayan/" target="_blank" rel="noopener noreferrer">
+              <button className="p-2 bg-white/10 rounded-full hover:bg-white/20 transition-all duration-300 hover:scale-110 group">
+                <Linkedin className="w-5 h-5 text-blue-400 group-hover:text-blue-300" />
+              </button> 
+            </a>
+            <a href="https://github.com/insomnic123" target="_blank" rel="noopener noreferrer">
+              <button className="p-2 bg-white/10 rounded-full hover:bg-white/20 transition-all duration-300 hover:scale-110 group">
+                <Github className="w-5 h-5 text-white group-hover:text-gray-300" />
+              </button> 
+            </a>
+            <a href="mailto:qaziayn@gmail.com" target="_blank" rel="noopener noreferrer">
+              <button className="p-2 bg-white/10 rounded-full hover:bg-white/20 transition-all duration-300 hover:scale-110 group">
+                <Mail className="w-5 h-5 text-red-400 group-hover:text-red-300" />
+              </button> 
+            </a>
+          </div>
+          
+          <div className="text-sm text-gray-400">
+            © 2025 Qazi. All rights reserved.
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
