@@ -17,7 +17,7 @@ export const metadata = {
   description: "Explore Qazi Ayan's personal projects, skills, and creative work — all in one place.",
   authors: [{ name: 'Qazi Ayan' }],
   openGraph: {
-    title: "Qazi Ayan's Personal Portfolio Site :)",
+    title: "Qazi's Portfolio Site :)",
     description: "Explore Qazi Ayan's personal projects, skills, and creative work — all in one place.",
     url: 'https://qazi-ayan.vercel.app/',
     siteName: "Qazi Ayan's Portfolio",
@@ -33,14 +33,12 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Qazi Ayan's Personal Portfolio Site :)",
+    title: "Qazi's Portfolio Site :)",
     description: "Explore Qazi Ayan's personal projects, skills, and creative work — all in one place.",
     images: ['https://qazi-ayan.vercel.app/_next/image?url=%2Fmeyay.png&w=640&q=75'],
   },
 
 };
-
-
 
 export default function RootLayout({ children }) {
   return (
