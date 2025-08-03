@@ -13,31 +13,34 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Qazi Ayan&#39;s Personal Portfolio Site :)",
-  description: "Explore Qazi Ayan&#39;s personal projects, skills, and creative work — all in one place.",
-  authors: [{ name: "Qazi Ayan" }],
+  title: "Qazi's Portfolio Site :)",
+  description: "Explore Qazi Ayan's personal projects, skills, and creative work — all in one place.",
+  authors: [{ name: 'Qazi Ayan' }],
   openGraph: {
-    title: "Qazi Ayan&#39;s Personal Portfolio Site :)",
-    description: "Explore Qazi Ayan&#39;s personal projects, skills, and creative work — all in one place.",
-    url: "https://qazi-ayan.vercel.app/",
+    title: "Qazi Ayan's Personal Portfolio Site :)",
+    description: "Explore Qazi Ayan's personal projects, skills, and creative work — all in one place.",
+    url: 'https://qazi-ayan.vercel.app/',
     siteName: "Qazi Ayan's Portfolio",
     images: [
       {
-        url: "https://qazi-ayan.vercel.app/_next/image?url=%2Fmeyay.png&w=640&q=75",
+        url: 'https://qazi-ayan.vercel.app/_next/image?url=%2Fmeyay.png&w=640&q=75', 
         width: 1200,
         height: 630,
-        alt: "Qazi Ayan Preview Image",
+        alt: 'Qazi Ayan Preview Image',
       },
     ],
-    type: "website",
+    type: 'website',
   },
   twitter: {
-    card: "summary_large_image",
-    title: "Qazi Ayan&#39;s Personal Portfolio Site :)",
-    description: "Explore Qazi Ayan&#39;s personal projects, skills, and creative work — all in one place.",
-    images: ["https://qazi-ayan.vercel.app/main-image.png"],
+    card: 'summary_large_image',
+    title: "Qazi Ayan's Personal Portfolio Site :)",
+    description: "Explore Qazi Ayan's personal projects, skills, and creative work — all in one place.",
+    images: ['https://qazi-ayan.vercel.app/_next/image?url=%2Fmeyay.png&w=640&q=75'],
   },
+
 };
+
+
 
 export default function RootLayout({ children }) {
   return (
