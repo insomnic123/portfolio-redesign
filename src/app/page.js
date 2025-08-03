@@ -9,6 +9,7 @@ import { Github, Linkedin, Mail } from 'lucide-react';
 import VanillaTilt from "vanilla-tilt";
 import ExtracurricularSection from "./ecs/extracurriculars";
 import TechStack from "./techstack/techstack";
+import Head from "next/head";
 
 const Ahsing = localFont({
   src: "fonts/Ahsing.ttf"
@@ -70,7 +71,26 @@ export default function Home() {
   }, []);
 
   return (
+
+
     <div className="min-h-screen bg-[url('/flower.png')] bg-repeat bg-[length:960px_540px] relative">
+        <Head>
+      <title>Qazi Ayan's Personal Portfolio Site :)</title>
+      <meta name="description" content="Explore Qazi Ayan's personal projects, skills, and creative work — all in one place." />
+      <meta name="author" content="Qazi Ayan" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+      <meta property="og:title" content="Qazi Ayan's Portfolio Site :)" />
+      <meta property="og:description" content="Explore Qazi Ayan's personal projects, skills, and creative work — all in one place." />
+      <meta property="og:image" content="https://qazi-ayan.vercel.app/main-image.png" />
+      <meta property="og:url" content="https://qazi-ayan.vercel.app/" />
+      <meta property="og:type" content="website" />
+
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content="Qazi Ayan's Personal Portfolio Site :)" />
+      <meta name="twitter:description" content="Explore Qazi Ayan's personal projects, skills, and creative work — all in one place." />
+      <meta name="twitter:image" content="https://qazi-ayan.vercel.app/main-image.png" />
+    </Head>
       <div className="w-full fixed top-0 left-0 z-20">
         <NavBar />
       </div>
