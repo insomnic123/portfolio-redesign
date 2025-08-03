@@ -75,22 +75,22 @@ export default function Home() {
 
     <div className="min-h-screen bg-[url('/flower.png')] bg-repeat bg-[length:960px_540px] relative">
         <Head>
-      <title>Qazi Ayan's Personal Portfolio Site :)</title>
-      <meta name="description" content="Explore Qazi Ayan's personal projects, skills, and creative work — all in one place." />
-      <meta name="author" content="Qazi Ayan" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Qazi Ayan&#39;s Personal Portfolio Site :)</title>
+        <meta name="description" content="Explore Qazi Ayan&#39;s personal projects, skills, and creative work — all in one place." />
+        <meta name="author" content="Qazi Ayan" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-      <meta property="og:title" content="Qazi Ayan's Portfolio Site :)" />
-      <meta property="og:description" content="Explore Qazi Ayan's personal projects, skills, and creative work — all in one place." />
-      <meta property="og:image" content="https://qazi-ayan.vercel.app/main-image.png" />
-      <meta property="og:url" content="https://qazi-ayan.vercel.app/" />
-      <meta property="og:type" content="website" />
+        <meta property="og:title" content="Qazi Ayan&#39;s Portfolio Site :)" />
+        <meta property="og:description" content="Explore Qazi Ayan&#39;s personal projects, skills, and creative work — all in one place." />
+        <meta property="og:image" content="https://qazi-ayan.vercel.app/_next/image?url=%2Fmeyay.png&w=640&q=75" />
+        <meta property="og:url" content="https://qazi-ayan.vercel.app/" />
+        <meta property="og:type" content="website" />
 
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content="Qazi Ayan's Personal Portfolio Site :)" />
-      <meta name="twitter:description" content="Explore Qazi Ayan's personal projects, skills, and creative work — all in one place." />
-      <meta name="twitter:image" content="https://qazi-ayan.vercel.app/main-image.png" />
-    </Head>
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Qazi Ayan&#39;s Personal Portfolio Site :)" />
+        <meta name="twitter:description" content="Explore Qazi Ayan&#39;s personal projects, skills, and creative work — all in one place." />
+        <meta name="twitter:image" content="https://qazi-ayan.vercel.app/_next/image?url=%2Fmeyay.png&w=640&q=75" />
+  </Head>
       <div className="w-full fixed top-0 left-0 z-20">
         <NavBar />
       </div>
