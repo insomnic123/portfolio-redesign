@@ -32,7 +32,7 @@ const CarouselCard = ({
   return (
     <div 
       ref={cardRef}
-      className={`relative overflow-hidden rounded-2xl w-80 min-h-[400px] group cursor-pointer bg-white shadow-lg ${className}`}
+      className={`relative overflow-hidden rounded-2xl w-80 min-h-[400px] group bg-white shadow-lg ${className}`}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       style={{

@@ -101,7 +101,7 @@ const TechStack = ({ Ahsing, DMSans }) => {
             {tiles.map((tile, index) => (
                 <div 
                     key={index} 
-                    className="group backdrop-blur-md bg-white/30 p-5 rounded-lg shadow-xl flex flex-col w-full max-w-sm sm:w-80 transition-all duration-300 hover:bg-white/40 hover:shadow-2xl hover:scale-105 cursor-pointer"
+                    className="group backdrop-blur-md bg-white/30 p-5 rounded-lg shadow-xl flex flex-col w-full max-w-sm sm:w-80 transition-all duration-300 hover:bg-white/40 hover:shadow-2xl hover:scale-105"
                 >
                     <div className="relative p-5 w-full h-20 mb-4 rounded-lg overflow-hidden">
                         <Image

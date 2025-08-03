@@ -22,7 +22,12 @@ body {
 
 a:hover,
 button:hover,
-.hoverable:hover {
+input:hover,
+textarea:hover,
+select:hover,
+[role="button"]:hover,
+.hoverable:hover,
+.interactive:hover {
   cursor: url('/arrowhead-rounded-outline (2).svg'), auto;
 }
 
