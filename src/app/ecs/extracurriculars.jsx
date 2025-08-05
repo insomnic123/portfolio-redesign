@@ -47,6 +47,14 @@ const ExtracurricularSection = ({ Ahsing, DMSans }) => {
       dateCreated: "July 2025"
     },
     {
+      image: "/YEAR IN (1).png",
+      title: "CRiDO",
+      description: "CRiDO is a simple browser-based game similar to cookie clicker where you can trade fake stocks. I wanted to experiment with making simple games through react, and after playing a similar simulation online, I decided to recreate it with my own twists!",
+      buttonText: "Play Demo",
+      buttonLink: "https://crido.vercel.app/",
+      dateCreated: "August 2025 | Under Development"
+    },
+    {
       image: "/Hack the Skies (5).png",
       title: "Hack the Skies | Vice Chair & Director of Marketing",
       description: "Hack the Skies is a highschool-student run hackathon event based in Toronto, founded in 2023. The 2024 iteration featured 16 projects from 80+ participants!",
