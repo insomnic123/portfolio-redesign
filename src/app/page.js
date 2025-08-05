@@ -114,7 +114,7 @@ export default function Home() {
             <span className="animate-pulse text-blue-600">|</span>
             {' '}who is looking to constantly grow and learn new things! I&apos;ve been
             <strong> coding since grade six</strong>, and have slowly been building my skills as both a <strong>programmer, designer</strong>, and
-            <strong> aspiring entrepreneur</strong>. Outside of programming, I really enjoy <strong>learning new things</strong>, whether it&apos;s <strong>astronomy</strong>,
+            <strong> entrepreneur</strong>. Outside of programming, I really enjoy <strong>learning new things</strong>, whether it&apos;s <strong>astronomy</strong>,
             <strong> learning an instrument</strong>, <strong>playing sports</strong>, etc! Keep scrolling to find out more :) <em>(psst website is still under construction btw)</em>
           </p>
           <div className="flex items-center gap-4 mb-0 mt-4 ">
