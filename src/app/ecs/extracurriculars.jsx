@@ -52,7 +52,7 @@ const ExtracurricularSection = ({ Ahsing, DMSans }) => {
       description: "CRiDO is a simple browser-based game similar to cookie clicker where you can trade fake stocks. I wanted to experiment with making simple games through react, and after playing a similar simulation online, I decided to recreate it with my own twists!",
       buttonText: "Play Demo",
       buttonLink: "https://crido.vercel.app/",
-      dateCreated: "August 2025 | Under Development"
+      dateCreated: "August 2025"
     },
     {
       image: "/Hack the Skies (5).png",
