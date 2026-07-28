@@ -102,7 +102,7 @@ export default function Home() {
             Hey There!
           </h1>
           <p className={`text-gray-800 text-base sm:text-lg leading-relaxed ${DMSans.className}`}>
-            My name is Qazi, and I am a Grade 12 student at Danforth CTI in Toronto!
+            My name is Qazi, and I am an incoming Computer Engineering student at TMU!
             I am{' '}
             <span className="text-purple-600 font-semibold">
               {currentWordIndex === 5 ? (
